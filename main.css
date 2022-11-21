@@ -1,0 +1,177 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 1.25rem;
+}
+
+body{
+    font-family:sans-serif;
+    background-color: black;
+    color:white;
+    line-height: 1.5;
+}
+
+img {
+    width:100%;
+    max-width:100%;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, ol, nav {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color:greenyellow;
+}
+
+.container {
+    margin-left:1rem;
+    margin-right:1rem;
+}
+
+@media (min-width:1024px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60ch;
+    }
+}
+
+.site-header {
+    min-height: 100vh;
+   /* background-image: url(istockphoto2.jpg);
+    background-size:cover;*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-nav a {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.site-header p:hover:last-child {
+    color:greenyellow;
+}
+
+.about-me {
+    min-height: 100vh;
+}
+
+span {
+    color:greenyellow;
+}
+
+abbr {
+    text-decoration: none;
+    font-style: italic;
+}
+
+.about-me h2, .me-para1 {
+    text-align: center;
+} 
+
+.skillset-section {
+    min-height: 100vh;
+    text-align: center;
+}
+
+.skillset-section ul {
+    display: flex;
+    list-style: none;
+    column-gap:1.25rem ;
+}
+
+.skillset-section img {
+    width: 12.5rem;
+    height: 11.25rem;
+    box-shadow: 0px 5px 10px 0px greenyellow;
+    transition: all ease 0.2s;
+    border: 1px solid #333;
+}
+
+.skillset-section img:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px 2px greenyellow;
+}
+  
+.code-section {
+    min-height: 100vh;
+}
+
+.code-section h2, h3 {
+    text-align: center;
+}
+
+.code-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.25rem;
+}
+
+.move {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    animation: scale(0.9);
+}
+
+.move:first-child {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+      alternate;
+}
+
+.move:last-child {
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+      infinite alternate;
+}
+
+@keyframes bop {
+    0% {
+        transform: scale(0.9);
+    }
+    50%,
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bopB {
+  0% {
+    transform: scale(0.9);
+  }
+  80%,
+  100% {
+    transform: scale(1) rotateZ(-3deg);
+  }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+@media (max-width:480px){
+    .site-header {
+        text-align: center;
+    }
+
+    .about-me {
+        text-align: center;
+    }
+
+    .skillset-section ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
